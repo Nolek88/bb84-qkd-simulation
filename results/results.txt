@@ -1,0 +1,37 @@
+--- SCENARIO 1: Ideale (No Eve, No Noise) ---
+
+--- Analisi Risultati ---
+Chiave filtrata di Alice (primi 20): [np.int64(0), np.int64(0), np.int64(1), np.int64(1), np.int64(1), np.int64(0), np.int64(1), np.int64(1), np.int64(1), np.int64(1), np.int64(0), np.int64(0), np.int64(0), np.int64(1), np.int64(0), np.int64(0), np.int64(1), np.int64(1), np.int64(0), np.int64(1)]
+Chiave filtrata di Bob (primi 20):   [0, 0, 1, 1, 1, 0, 1, 1, 1, 1, 0, 0, 0, 1, 0, 0, 1, 1, 0, 1]
+Lunghezza chiave filtrata: 50
+Errori rilevati: 0
+** QBER (Quantum Bit Error Rate): 0.00% **
+
+RISULTATO: SUCCESSO! QBER nullo o trascurabile.
+             La chiave segreta è stabilita.
+
+--- SCENARIO 2: Con Eve (No Noise) ---
+>>> EVE HA INTERCETTATO I QUBIT! <<<
+
+--- Analisi Risultati ---
+Chiave filtrata di Alice (primi 20): [np.int64(0), np.int64(0), np.int64(1), np.int64(1), np.int64(1), np.int64(0), np.int64(1), np.int64(1), np.int64(1), np.int64(1), np.int64(0), np.int64(0), np.int64(0), np.int64(1), np.int64(0), np.int64(0), np.int64(1), np.int64(1), np.int64(0), np.int64(1)]
+Chiave filtrata di Bob (primi 20):   [0, 0, 0, 1, 0, 1, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 1, 1, 0, 1]
+Lunghezza chiave filtrata: 50
+Errori rilevati: 17
+** QBER (Quantum Bit Error Rate): 34.00% **
+
+RISULTATO: ATTENZIONE! QBER altissimo. Eve è stata rilevata!
+             Protocollo abortito.
+             
+--- SCENARIO 3: Con Rumore 5.0% (No Eve) ---
+>>> SIMULAZIONE CON RUMORE (Livello: 0.05) <<<
+
+--- Analisi Risultati ---
+Chiave filtrata di Alice (primi 20): [np.int64(0), np.int64(0), np.int64(1), np.int64(1), np.int64(1), np.int64(0), np.int64(1), np.int64(1), np.int64(1), np.int64(1), np.int64(0), np.int64(0), np.int64(0), np.int64(1), np.int64(0), np.int64(0), np.int64(1), np.int64(1), np.int64(0), np.int64(1)]
+Chiave filtrata di Bob (primi 20):   [0, 0, 1, 1, 1, 0, 1, 1, 1, 1, 0, 0, 0, 1, 0, 0, 1, 1, 0, 1]
+Lunghezza chiave filtrata: 50
+Errori rilevati: 2
+** QBER (Quantum Bit Error Rate): 4.00% **
+
+RISULTATO: ATTENZIONE! QBER (4.00%) sopra la soglia di tolleranza.
+             Sarebbe necessaria Error Correction. Possibile presenza di Eve.

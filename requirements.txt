@@ -1,0 +1,23 @@
+# ============================================
+#  BB84 QKD Simulation - Requirements
+# ============================================
+#  Compatibile con Python 3.10 - 3.12
+#  Testato con Python 3.12.3
+# ============================================
+
+# ---------- Quantum Computing ----------
+qiskit>=1.0.0,<2.0.0
+qiskit-aer>=0.14.0,<1.0.0
+
+# ---------- Data Analysis & Plotting ----------
+numpy>=1.24.0,<2.0.0
+matplotlib>=3.7.0,<4.0.0
+
+# ---------- Notebook Environment ----------
+jupyterlab>=4.0.0,<5.0.0
+notebook>=7.0.0,<8.0.0
+ipykernel>=6.20.0
+ipywidgets>=8.0.0
+
+# ---------- Utilities ----------
+typing-extensions>=4.5.0
